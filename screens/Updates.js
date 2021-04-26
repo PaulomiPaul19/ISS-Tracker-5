@@ -66,7 +66,7 @@ export default class UpdateScreen extends Component {
     }
 
     renderItem = ({ item }) => {
-    
+        let width = 50;
         let url;
         if (item.type == "Report") {
             url = require("../assets/iss_icon.png")
@@ -92,7 +92,7 @@ export default class UpdateScreen extends Component {
                 >
                     <Text style={styles.cardTitle}>{item.title}</Text>
                     <View style={styles.iconContainer}>
-                        <Image source={url} style={{ width: 50, height: 50 }}></Image>
+                        <Image source={url} style={{ width: width, height: width }}></Image>
                     </View>
                 </TouchableOpacity>
             );
@@ -132,7 +132,7 @@ export default class UpdateScreen extends Component {
             return (
                 <View style={styles.container}>
                     <SafeAreaView style={styles.droidSafeArea} />
-                    <ImageBackground source={require('../assets/bg_updates.jpg')} style={styles.backgroundImage}>
+                    <ImageBackground source={require('../assets/bg.png')} style={styles.backgroundImage}>
                         <View style={styles.titleBar}>
                             <Text style={styles.titleText}>Updates</Text>
                         </View>
