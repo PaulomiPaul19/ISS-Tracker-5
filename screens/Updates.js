@@ -35,7 +35,7 @@ export default class UpdateScreen extends Component {
         axios
             .get("https://spaceflightnewsapi.net/api/v2/articles")
             .then(response => {
-                this.setState({ articles: response.data.docs })
+                this.setState({ articles: response.data })
                 this.getReports()
             })
             .catch(error => {
@@ -47,7 +47,7 @@ export default class UpdateScreen extends Component {
         axios
             .get("https://spaceflightnewsapi.net/api/v2/reports")
             .then(response => {
-                this.setState({ reports: response.data.docs })
+                this.setState({ reports: response.data })
                 this.getBlogs()
             })
             .catch(error => {
@@ -59,7 +59,7 @@ export default class UpdateScreen extends Component {
         axios
             .get("https://spaceflightnewsapi.net/api/v2/blogs")
             .then(response => {
-                this.setState({ blogs: response.data.docs })
+                this.setState({ blogs: response.data })
             })
             .catch(error => {
                 Alert.alert(error.message)
