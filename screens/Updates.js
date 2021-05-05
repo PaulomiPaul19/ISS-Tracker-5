@@ -30,6 +30,7 @@ export default class UpdateScreen extends Component {
         this.getArticles()
     }
 
+    
     getArticles = () => {
         axios
             .get("https://spaceflightnewsapi.net/api/v1/articles")

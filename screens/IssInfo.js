@@ -14,7 +14,7 @@ export default class IssLocationScreen extends Component {
             location: {}
         };
     }
-    
+
     componentDidMount() {
         this.getIssLocation()
         try {
@@ -65,15 +65,15 @@ export default class IssLocationScreen extends Component {
 const styles = StyleSheet.create({
     infoContainer: {
         flex: 0.2,
-        backgroundColor: 'rgba(52, 52, 52, 0.5)',
-        marginLeft: 10,
-        marginRight: 10,
-        marginTop: 5,
-        borderRadius: 10,
-        padding: 10
+        backgroundColor: 'white',
+        marginTop: -10,
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+        padding: 30
     },
     infoText: {
         fontSize: 15,
-        color: "white"
+        color: "black",
+        fontWeight: "bold"
     }
 });

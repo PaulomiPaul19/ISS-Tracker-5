@@ -21,7 +21,7 @@ export default class IssLocationScreen extends Component {
         super(props);
         this.state = {
             location: {},
-            
+            isRefresh: false
         };
     }
 
@@ -52,13 +52,20 @@ export default class IssLocationScreen extends Component {
                     <Text>Loading</Text>
                 </View>
             )
-        } else {    
+        } else {
             return (
                 <View style={styles.container}>
                     <SafeAreaView style={styles.droidSafeArea} />
-                    <ImageBackground source={require('../assets/iss_bg.jpg')} style={styles.backgroundImage}>
+                    <ImageBackground source={require('../assets/bg.png')} style={styles.backgroundImage}>
                         <View style={styles.titleContainer}>
                             <Text style={styles.titleText}>ISS Location</Text>
+                        </View>
+                        <View style={styles.refeshContainer}>
+                            <TouchableOpacity style={{ width: 100, height: "100%", alignItems: "center" }} onPress={() =>
+                                this.setState({})
+                            }>
+                                <Image source={require("../assets/refresh_icon.png")} style={{ width: 50, height: 50 }}></Image>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.mapContainer}>
                             <MapView
